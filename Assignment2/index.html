@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <title></title>
+   <title>Home Page</title>
 
     <link href="css/bootstrap.css" rel="stylesheet"> <!-- pulls in the main bootstrap content we need -->
 
@@ -24,7 +24,7 @@
             class="navbar-toggle collapsed"
             data-toggle="collapse"
             data-target="#main_navbar"
-            aria-expanded="false">open!</button>
+            aria-expanded="false">&#9776;</button>
         </div> <!-- collapsed navbar -->
 
         <!-- start un-collapsed navbar -->
@@ -33,15 +33,15 @@
             id="main_navbar">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li class=""><a href="albums.html">Albums</a></li>
-            <li class=""><a href="photos.html">All Photos</a></li>
+            <li class=""><a href="task.html">Task</a></li>
+            <li class=""><a href="about.html">About</a></li>
           </ul>
         </div> <!-- un-collapsed navbar -->
       </div>
     </nav>
 
     <div class="container">
-      <h1>Wellcome to my bootstrap site!</h1>
+      <h1>Shopping Task</h1>
 
       <!-- start breadcrumb -->
       <ol class="breadcrumb">
@@ -49,6 +49,45 @@
       </ol> <!-- /breadcrumb -->
     </div>
 
+    <div class="row">
+      <div class="col-xs-6 col-md-3 col-lg-2">
+        <p>
+          Name
+        </p>
+      </div>
+      <div class="col-xs-6 col-md-9 col-lg-10">
+        <p>
+          Tasks
+        </p>
+      </div>
+    </div>
+
+    <div class="row" id="person">
+      <div class="col-xs-6 col-md-3 col-lg-2" id="person1">
+        <a href="task.html">Jay</a>
+      </div>
+      <div class="col-xs-2 col-md-3 col-lg-3" id="task1">
+        <a href="task.html"><input type="checkbox" checked>Buy Milk<br></a>
+      </div>
+      <div class="col-xs-2 col-md-3 col-lg-3" id="task2">
+        <a href="task.html"><input type="checkbox">Buy Chicken Wings<br></a>
+      </div>
+      <div class="col-xs-2 col-md-3 col-lg-3" id="task3">
+        <a href="task.html"><input type="checkbox">Buy Eggs<br></a>
+      </div>
+    </div>
+
+    <div class="row" id="person">
+      <div class="col-xs-6 col-md-3 col-lg-2" id="person2">
+        <a href="task.html">Tom</a>
+      </div>
+      <div class="col-xs-2 col-md-3 col-lg-3" id="task4">
+        <a href="task.html"><input type="checkbox" checked>Buy Beef<br></a>
+      </div>
+      <div class="col-xs-2 col-md-3 col-lg-3" id="task5">
+        <a href="task.html"><input type="checkbox">Buy Bread<br></a>
+      </div>
+    </div>
 
     <script src="js/jquery.min.js"></script> <!-- jquery libraries -->
     <script src="js/bootstrap.min.js"></script> <!-- bootsrap libraries -->
