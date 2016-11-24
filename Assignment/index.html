@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- This is a first example of using a template -->
 
 <head>
@@ -21,3 +22,97 @@
     <!-- put your HTML here -->
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- use the head section to define meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animals</title>
+
+    <!-- include our libraries and css files -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/handlebars-v3.0.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/AnimalsData.js"></script>
+    <script src="js/assignment.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/assignment.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- Page title -->
+      <div class="page-header">
+        <h1>Different Animals</h1>
+      </div>
+
+      <!-- Navigation menu -->
+      <div class="nav nav-tabs">
+        <!-- **little change here! added div, move ul's class to div -->
+        <ul>
+          <li role="" class="active"><a href="#" id="animals-tab" >Animals</a></li>
+          <li role=""><a href="#" id="photos-tab" >Photos</a></li>
+          <li role=""><a href="#" id="slideshow-tab" >Slideshow</a></li>
+        </ul>
+      </div>
+
+      <!-- Empty content section, fill up with javascript and templates -->
+      <div class="content" class="container-fluid" role="main">
+      </div>
+
+    </div><!-- / container -->
+
+<!-- Templates -->
+<!-- animals view template -->
+<script id="animals-template" type="text/x-handlebars-template">
+  <div class="row">
+
+    {{#each animals}}
+    <div class="col-xs-12 col-md-3">
+      <div class="animals-thumbnail" data-id="{{@index}}">
+        <img class="crop-img" src="{{thumbnail}}" alt="" />
+
+        <div class="caption">
+          <h4>{{name}}</h4>
+          <p>{{photos.length}} photos</p>
+        </div>
+      </div>
+    </div> <!-- / col -->
+
+    {{/each}}
+
+  </div>
+</script>
+
+<!-- Template for each animals' category -->
+<script id="photos-template" type="text/x-handlebars-template">
+  <div class="row">
+
+    {{#each photos}}
+    <div class="col-xs-12 col-md-3">
+      <div class+"phtot-thumbnail" data-id="{{@index}}">
+        
+      </div>
+    </div>
+
+  </div>
+
+</script>
+
+  </body>
+</html>
+>>>>>>> origin/master
