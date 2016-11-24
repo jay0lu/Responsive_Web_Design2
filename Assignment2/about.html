@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <title></title>
+   <title>About</title>
 
-    <link href="css/bootstrap.css" rel="stylesheet"> <!-- pulls in the main bootstrap content we need -->
-    <link href="css/styles.css" rel="stylesheet"> <!-- pulls in the main bootstrap content we need -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- pulls in the main bootstrap content we need -->
+ <!-- pulls in the main bootstrap content we need -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,7 +27,7 @@
             class="navbar-toggle collapsed"
             data-toggle="collapse"
             data-target="#main_navbar"
-            aria-expanded="false">open!</button>
+            aria-expanded="false">&#9776;</button>
         </div> <!-- collapsed navbar -->
 
         <!-- start un-collapsed navbar -->
@@ -34,30 +36,30 @@
             id="main_navbar">
           <ul class="nav navbar-nav">
             <li class=""><a href="index.html">Home</a></li>
-            <li class="active"><a href="albums.html">Albums</a></li>
-            <li class=""><a href="photos.html">All Photos</a></li>
+            <li class=""><a href="task.html">Task</a></li>
+            <li class="active"><a href="about.html">About</a></li>
           </ul>
         </div> <!-- un-collapsed navbar -->
       </div>
     </nav>
 
     <div class="container">
-      <h1>Here are my albums!</h1>
+      <h1>About This Website</h1>
 
       <!-- start breadcrumb -->
       <ol class="breadcrumb">
         <li><a href="index.html">Home</a></li>
-        <li><a href="albums.html">Albums</a></li>
+        <li><a href="about.html">About</a></li>
       </ol> <!-- /breadcrumb -->
 
-      <a href="photos.html"><img class="album_cover" src="./images/img_1.jpg" alt="graffiti cover photo" /></a>
-      <p>
-        Graffiti Album
-      </p>
-      <img class="album_cover" src="./images/img_2.jpg" alt="full english breakfirst" />
-      <img class="album_cover" src="./images/img_3.jpg" alt="racks of cheese" />
+    <p id="about">
+      This website is to help you remember the shopping task you need to do.<br>
+      Home page contains the tasks and associate person.<br>
+      Task page contains the summary of the tasks and person.<br>
+      About page is to explain what the site is for.<br>
+    </p>
 
-    </div>
+  </div>  <!-- / container -->
 
     <script src="js/jquery.min.js"></script> <!-- jquery libraries -->
     <script src="js/bootstrap.min.js"></script> <!-- bootsrap libraries -->
