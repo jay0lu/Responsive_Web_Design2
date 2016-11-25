@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+<!-- This is a first example of using a template -->
+
+<head>
+
+<!-- include our libraries and css files -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="AnimalsData.js"></script>
+<script src="assignment.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="assignment.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- put your HTML here -->
+
+</body>
+=======
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,10 +38,10 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/AnimalsData.js"></script>
-    <script src="js/assignment.js"></script>
+    <script src="js/animals.js"></script>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/assignment.css" rel="stylesheet">
+    <link href="css/animals.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,6 +87,7 @@
         <img class="crop-img" src="{{thumbnail}}" alt="" />
 
         <div class="caption">
+          <!-- category name -->
           <h4>{{name}}</h4>
           <p>{{photos.length}} photos</p>
         </div>
@@ -70,7 +96,7 @@
 
     {{/each}}
 
-  </div>
+  </div>  <!-- / row -->
 </script>
 
 <!-- Template for each animals' category -->
@@ -80,13 +106,76 @@
     {{#each photos}}
     <div class="col-xs-12 col-md-3">
       <div class+"phtot-thumbnail" data-id="{{@index}}">
-        
+        <img class="crop0img" src="{{src}}" alt="" />
+
+        <div class="caption">
+          <!-- animal name photo name -->
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+        </div>
       </div>
-    </div>
+    </div>  <!-- / col -->
+    {{/each}}
 
-  </div>
-
+  </div>  <!-- / row -->
 </script>
 
+<!-- template for view a single photo -->
+<!-- this display a large photo and description -->
+<script id="photo-template" type="text/x-handlebars-temlate">
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <img class="large-img" src="{{src}}" alt="" />
+
+      <div class="caption">
+        <!-- animal name photo name -->
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+      </div>
+    </div>  <!-- / col -->
+  </div>  <!-- / row -->
+</script>
+
+
+<!-- Template for slideshow for a single category, using carousel view -->
+<script id="slideshow-template" type="text/x-handlebars-template">
+  <div class="row">
+    <div class="col-md-6">
+
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          {{#each photos}}
+          <div class="item {{if @first}}active{{/if}}">
+            <img class="carousel-img" src="{{src}} alt=">
+            <div class="carousel-caption">
+              {{name}}
+            </div>
+          </div>  <!-- / carousel item -->
+          {{/each}}
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>  <!--/ carousel -->
+    </div>  <!-- / col -->
+  </div> <!-- / row -->
+</script>
   </body>
 </html>
+>>>>>>> origin/master
