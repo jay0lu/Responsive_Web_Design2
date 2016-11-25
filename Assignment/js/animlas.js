@@ -2,4 +2,4 @@
  * Javascript code for animals
  */
 
- var animals-template, phtots_template
+ var animals-template, photos-template, photo_template, slideshow_template;
