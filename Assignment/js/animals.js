@@ -2,10 +2,10 @@
  * Javascript code for animals
  */
 
- var animals-template, photos-template, photo_template, slideshow_template;
- // variables to store the current animals and photos
- var current_animal = gallery.animals[0];
- var current_photo = current_animal.photos[0];
+var animals_template, photos_template, photo_template, slideshow_template;
+// variables to store the current animals and photos
+var current_animal = animals_data.category[0];
+var current_category = current_animal.animals[0];
 
 // function that instantiates a template and display the results in current div
 function showTemplate(template, data){
@@ -45,7 +45,7 @@ $(document).ready(function(){
       var index = $(this).data("id");
 
       // set the current index
-      current_animal = gallery.animals[index];
+      current_animal = animals_data.category[index];
 
       // displays the photos template
       showTemplate(photos_template, current_animal);
@@ -53,9 +53,9 @@ $(document).ready(function(){
       $(".photo-thumbnail").click(function(){
         var index = $(this).data("id");
 
-        current_photo = current_animal.photos[index];
+        current_category = current_category.animals[index];
 
-        showTemplate(photo_template, current_photo);
+        showTemplate(photo_template, current_category);
       });
     });
   });
@@ -63,7 +63,7 @@ $(document).ready(function(){
   $("#photos-tab").click(function () {
 
 		// displays the photos template
-		showTemplate(photos_template, current_album);
+		showTemplate(photos_template, current_category);
 
 		// make the photos tab the active one
 		// first make the currently active tab inactive
@@ -83,17 +83,17 @@ $(document).ready(function(){
 			var index = $(this).data("id");
 
 			// set the current photo to this photo
-			current_photo = current_animal.photos[index];
+			current_category = current_category.animals[index];
 
 			// displays the single photo template
-			showTemplate(photo_template, current_photo);
+			showTemplate(photo_template, current_category);
 		});
 	});
 
   $("#slideshow-tab").click(function () {
 		// display the slideshow template using the
 		// current album
-		showTemplate(slideshow_template, current_album);
+		showTemplate(slideshow_template, current_category);
 
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive

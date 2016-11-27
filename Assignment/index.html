@@ -58,7 +58,7 @@
 <script id="animals-template" type="text/x-handlebars-template">
   <div class="row">
 
-    {{#each animals}}
+    {{#each category}}
     <div class="col-xs-12 col-md-3">
       <div class="animals-thumbnail" data-id="{{@index}}">
         <img class="crop-img" src="{{thumbnail}}" alt="" />
@@ -66,7 +66,7 @@
         <div class="caption">
           <!-- category name -->
           <h4>{{name}}</h4>
-          <p>{{photos.length}} photos</p>
+          <p>{{animals.length}} photos</p>
         </div>
       </div>
     </div> <!-- / col -->
@@ -80,10 +80,10 @@
 <script id="photos-template" type="text/x-handlebars-template">
   <div class="row">
 
-    {{#each photos}}
+    {{#each animals}}
     <div class="col-xs-12 col-md-3">
       <div class+"phtot-thumbnail" data-id="{{@index}}">
-        <img class="crop0img" src="{{src}}" alt="" />
+        <img class="crop-img" src="{{image1}}" alt="" />
 
         <div class="caption">
           <!-- animal name photo name -->
@@ -102,7 +102,7 @@
 <script id="photo-template" type="text/x-handlebars-temlate">
   <div class="row">
     <div class="col-xs-12 col-md-12">
-      <img class="large-img" src="{{src}}" alt="" />
+      <img class="large-img" src="{{image1}}" alt="" />
 
       <div class="caption">
         <!-- animal name photo name -->
@@ -129,10 +129,11 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          {{#each photos}}
+          {{#each animals}}
           <div class="item {{if @first}}active{{/if}}">
-            <img class="carousel-img" src="{{src}} alt=">
+            <img class="carousel-img" src="{{image1}} alt=">
             <div class="carousel-caption">
+              <!-- little change here -->
               {{name}}
             </div>
           </div>  <!-- / carousel item -->
