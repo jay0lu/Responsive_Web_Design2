@@ -10,6 +10,7 @@ var current_category = current_animal.animals[0];
 // function that instantiates a template and display the results in current div
 function showTemplate(template, data){
   var html = template(data);
+  // console.log(html);
   $('#content').html(html);
 }
 
@@ -60,7 +61,7 @@ $(document).ready(function(){
     });
   });
 
-  $("#photos-tab").click(function () {
+  $("#photos-tab").click(function(){
 
 		// displays the photos template
 		showTemplate(photos_template, current_category);
@@ -84,6 +85,7 @@ $(document).ready(function(){
 
 			// set the current photo to this photo
 			current_category = current_category.animals[index];
+      // console.log(current_category)
 
 			// displays the single photo template
 			showTemplate(photo_template, current_category);
