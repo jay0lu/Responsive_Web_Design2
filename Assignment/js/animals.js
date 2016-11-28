@@ -54,9 +54,11 @@ $(document).ready(function(){
       $(".photo-thumbnail").click(function(){
         var index = $(this).data("id");
 
-        current_category = current_category.animals[index];
+        current_category = current_animal.animals[index];
 
         showTemplate(photo_template, current_category);
+
+
       });
     });
   });
