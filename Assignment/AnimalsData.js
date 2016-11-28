@@ -8,6 +8,7 @@ var animals_data = {
 	category : [
 		{
 			name : "Reptiles",
+			thumbnail : "images/img_1.jpg",
 			animals : [
 				{
 					image1 : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Coast_Garter_Snake.jpg/500px-Coast_Garter_Snake.jpg",
@@ -37,6 +38,7 @@ var animals_data = {
 		},
 		{
 			name : "Mammals",
+			thumbnail : "images/img_1.jpg",
 			animals : [
 				{
 					image1 : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/AfricanWildCat.jpg/440px-AfricanWildCat.jpg",
@@ -66,6 +68,7 @@ var animals_data = {
 		},
 		{
 			name : "Birds",
+			thumbnail : "images/img_1.jpg",
 			animals : [
 				{
 					image1 : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/American_Flamingo_-_Phoenicopterus_ruber.jpg/440px-American_Flamingo_-_Phoenicopterus_ruber.jpg",
@@ -93,6 +96,5 @@ var animals_data = {
 				},
 			]
 		},
-
 	]
 };

@@ -16,6 +16,7 @@ var current_photo = current_album.photos[0];
 // and displays the results in the content div
 function showTemplate(template, data){
 	var html    = template(data);
+	console.log(html)
 	$('#content').html(html);
 }
 
