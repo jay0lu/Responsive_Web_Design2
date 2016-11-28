@@ -97,7 +97,7 @@ $(document).ready(function(){
   $("#slideshow-tab").click(function () {
 		// display the slideshow template using the
 		// current album
-		showTemplate(slideshow_template, current_category);
+		showTemplate(slideshow_template, current_animal);
 
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive
