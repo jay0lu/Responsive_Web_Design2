@@ -47,112 +47,113 @@
       </div>
 
       <!-- Empty content section, fill up with javascript and templates -->
-      <div class="content" class="container-fluid" role="main">
+      <div id="content" class="container-fluid" role="main">
       </div>
 
     </div><!-- / container -->
 
-<!-- Templates -->
+  <!-- Templates -->
 
-<!-- animals view template -->
-<script id="animals-template" type="text/x-handlebars-template">
-  <div class="row">
+  <!-- animals view template -->
+  <script id="animals-template" type="text/x-handlebars-template">
+    <div class="row">
 
-    {{#each category}}
-    <div class="col-xs-12 col-md-3">
-      <div class="animals-thumbnail" data-id="{{@index}}">
-        <img class="crop-img" src="{{thumbnail}}" alt="" />
+      {{#each category}}
+      <div class="col-xs-12 col-md-3">
+        <div class="animals-thumbnail" data-id="{{@index}}">
+          <!-- <img class="crop-img" src="{{name}}" alt="" /> -->
 
-        <div class="caption">
-          <!-- category name -->
-          <h4>{{name}}</h4>
-          <p>{{animals.length}} photos</p>
+          <div class="caption">
+            <!-- category name -->
+            <h4>{{name}}</h4>
+            <p>{{animals.length}} animals</p>
+          </div>
         </div>
-      </div>
-    </div> <!-- / col -->
+      </div> <!-- / col -->
 
-    {{/each}}
+      {{/each}}
 
-  </div>  <!-- / row -->
-</script>
+    </div>  <!-- / row -->
+  </script>
 
-<!-- Template for each animals' category -->
-<script id="photos-template" type="text/x-handlebars-template">
-  <div class="row">
+  <!-- Template for each animals' category -->
+  <script id="photos-template" type="text/x-handlebars-template">
+    <div class="row">
 
-    {{#each animals}}
-    <div class="col-xs-12 col-md-3">
-      <div class+"phtot-thumbnail" data-id="{{@index}}">
-        <img class="crop-img" src="{{image1}}" alt="" />
+      {{#each animals}}
+      <div class="col-xs-12 col-md-3">
+        <div class="photo-thumbnail" data-id="{{@index}}">
+          <img class="crop-img" src="{{image1}}" alt="" />
+          <img class="crop-img" src="{{image2}}" alt="" />
+
+          <div class="caption">
+            <!-- animal name photo name -->
+            <h3>{{name}}</h3>
+            <p>{{description}}</p>
+          </div>
+        </div>
+      </div>  <!-- / col -->
+      {{/each}}
+
+    </div>  <!-- / row -->
+  </script>
+
+  <!-- template for view a single photo -->
+  <!-- this display a large photo and description -->
+  <script id="photo-template" type="text/x-handlebars-temlate">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <img class="large-img" src="{{image1}}" alt="" />
 
         <div class="caption">
           <!-- animal name photo name -->
           <h3>{{name}}</h3>
           <p>{{description}}</p>
         </div>
-      </div>
-    </div>  <!-- / col -->
-    {{/each}}
-
-  </div>  <!-- / row -->
-</script>
-
-<!-- template for view a single photo -->
-<!-- this display a large photo and description -->
-<script id="photo-template" type="text/x-handlebars-temlate">
-  <div class="row">
-    <div class="col-xs-12 col-md-12">
-      <img class="large-img" src="{{image1}}" alt="" />
-
-      <div class="caption">
-        <!-- animal name photo name -->
-        <h3>{{name}}</h3>
-        <p>{{description}}</p>
-      </div>
-    </div>  <!-- / col -->
-  </div>  <!-- / row -->
-</script>
+      </div>  <!-- / col -->
+    </div>  <!-- / row -->
+  </script>
 
 
-<!-- Template for slideshow for a single category, using carousel view -->
-<script id="slideshow-template" type="text/x-handlebars-template">
-  <div class="row">
-    <div class="col-md-6">
+  <!-- Template for slideshow for a single category, using carousel view -->
+  <script id="slideshow-template" type="text/x-handlebars-template">
+    <div class="row">
+      <div class="col-md-6">
 
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
-          <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
-        </ol>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
+          </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          {{#each animals}}
-          <div class="item {{if @first}}active{{/if}}">
-            <img class="carousel-img" src="{{image1}} alt=">
-            <div class="carousel-caption">
-              <!-- little change here -->
-              {{name}}
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            {{#each animals}}
+            <div class="item {{if @first}}active{{/if}}">
+              <img class="carousel-img" src="{{image1}} alt=">
+              <div class="carousel-caption">
+                {{name}}
+              </div>
             </div>
-          </div>  <!-- / carousel item -->
-          {{/each}}
+            {{/each}}
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
         </div>
+      </div>
+    </div>
+  </script>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-
-      </div>  <!--/ carousel -->
-    </div>  <!-- / col -->
-  </div> <!-- / row -->
-</script>
   </body>
 </html>

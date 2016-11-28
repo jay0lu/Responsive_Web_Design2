@@ -16,6 +16,7 @@ var current_photo = current_album.photos[0];
 // and displays the results in the content div
 function showTemplate(template, data){
 	var html    = template(data);
+	// console.log(html);
 	$('#content').html(html);
 }
 
@@ -29,6 +30,7 @@ $(document).ready(function(){
 	//
 	var source   = $("#albums-template").html();
 	albums_template = Handlebars.compile(source);
+	// console.log(albums_template);
 
 	source   = $("#photos-template").html();
 	photos_template = Handlebars.compile(source);
@@ -126,6 +128,7 @@ $(document).ready(function(){
 
 			// set the current photo to this photo
 			current_photo = current_album.photos[index];
+			// console.log(current_photo)
 
 			// displays the single photo template
 			showTemplate(photo_template, current_photo);

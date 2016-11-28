@@ -93,6 +93,5 @@ var animals_data = {
 				},
 			]
 		},
-
 	]
 };
