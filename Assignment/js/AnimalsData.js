@@ -8,6 +8,7 @@ var animals_data = {
 	category : [
 		{
 			name : "Reptiles",
+			thumbnail : "http://image.shutterstock.com/z/stock-vector-illustration-with-set-of-reptiles-and-amphibians-isolated-on-white-background-81300151.jpg",
 			animals : [
 				{
 					image1 : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Coast_Garter_Snake.jpg/500px-Coast_Garter_Snake.jpg",
@@ -37,6 +38,7 @@ var animals_data = {
 		},
 		{
 			name : "Mammals",
+			thumbnail :"http://previews.123rf.com/images/jackf/jackf1408/jackf140800703/30682743-Set-of-blue-wildebeest-hippo-and-other-Artiodactyla-mammal-animals-over-white-Stock-Photo.jpg",
 			animals : [
 				{
 					image1 : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/AfricanWildCat.jpg/440px-AfricanWildCat.jpg",
@@ -66,6 +68,7 @@ var animals_data = {
 		},
 		{
 			name : "Birds",
+			thumbnail :"http://image.shutterstock.com/z/stock-vector-birds-set-animal-wildlife-vector-illustration-vector-illustration-isolated-birds-birds-flying-382749058.jpg",
 			animals : [
 				{
 					image1 : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/American_Flamingo_-_Phoenicopterus_ruber.jpg/440px-American_Flamingo_-_Phoenicopterus_ruber.jpg",
@@ -93,6 +96,5 @@ var animals_data = {
 				},
 			]
 		},
-
 	]
 };
