@@ -66,7 +66,7 @@ $(document).ready(function(){
   $("#photos-tab").click(function(){
 
 		// displays the photos template
-		showTemplate(photos_template, current_category);
+		showTemplate(photos_template, current_animal);
 
 		// make the photos tab the active one
 		// first make the currently active tab inactive
@@ -86,7 +86,7 @@ $(document).ready(function(){
 			var index = $(this).data("id");
 
 			// set the current photo to this photo
-			current_category = current_category.animals[index];
+			current_category = current_animal.animals[index];
       // console.log(current_category)
 
 			// displays the single photo template
