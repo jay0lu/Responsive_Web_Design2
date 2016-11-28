@@ -10,7 +10,7 @@ var current_category = current_animal.animals[0];
 // function that instantiates a template and display the results in current div
 function showTemplate(template, data){
   var html = template(data);
-  // console.log(html);
+  console.log(html);
   $('#content').html(html);
 }
 
